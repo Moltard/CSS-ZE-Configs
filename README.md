@@ -12,6 +12,8 @@ The **stripper-cfgs** folder contains Stripper:Source configs I made (or contrib
     - The goal is to add a counter representing the current level, for the **StageDisplay** plugin, as it cannot really understand physics levels system and other weird systems.
 - `ze_FFVII_Mako_Reactor_v5_3_moltard.cfg` Stripper cfg is the older version of the CS:S Stripper (2017), before other people helped me to add Zombieden Ext3 + Race and other fixes.
     - `ze_ffvii_mako_reactor_v5_3.cfg` is the latest version (it also contains some stuff which were added for a server event in 2022)
+- `ze_paranoid_rezurrection_v11_9.cfg` Stripper cfg is mainly made by Noctali. 
+	- I added many others changes and fixes to the map, through the years.
 
 
 ---
