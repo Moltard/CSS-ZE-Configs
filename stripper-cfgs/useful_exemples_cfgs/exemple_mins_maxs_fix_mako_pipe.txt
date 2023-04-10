@@ -1,0 +1,86 @@
+
+
+modify:
+{
+	match:
+	{
+		"hammerid" "1650"
+		"classname" "logic_auto"
+	}
+	insert:
+	{
+		"OnNewGame" "retener,FireUser1,,3,1"
+	}
+}
+
+add:
+{
+	"targetname" "retener"
+	"StartDisabled" "1"
+	"spawnflags" "1"
+	"origin" "-8184 8012 -6224"
+	"nodmgforce" "0"
+	"filtername" "humanos"
+	"damagetype" "0"
+	"damagemodel" "0"
+	"damagecap" "20"
+	"damage" "100000"
+	"classname" "trigger_hurt"
+	"OnUser1" "!self,AddOutput,solid 2,0,1"
+	"OnUser1" "!self,AddOutput,mins -136 -396 -744,0.1,1"
+	"OnUser1" "!self,AddOutput,maxs 136 396 744,0.1,1"
+}
+
+add:
+{
+	"targetname" "retener"
+	"StartDisabled" "1"
+	"spawnflags" "1"
+	"origin" "-9376 8528 -6512"
+	"nodmgforce" "0"
+	"filtername" "humanos"
+	"damagetype" "0"
+	"damagemodel" "0"
+	"damagecap" "20"
+	"damage" "100000"
+	"classname" "trigger_hurt"
+	"OnUser1" "!self,AddOutput,solid 2,0,1"
+	"OnUser1" "!self,AddOutput,mins -96 -80 -744,0.1,1"
+	"OnUser1" "!self,AddOutput,maxs 96 80 744,0.1,1"
+}
+
+add:
+{
+	"targetname" "retener"
+	"StartDisabled" "1"
+	"spawnflags" "1"
+	"origin" "-9120 9760 -6512"
+	"nodmgforce" "0"
+	"filtername" "humanos"
+	"damagetype" "0"
+	"damagemodel" "0"
+	"damagecap" "20"
+	"damage" "100000"
+	"classname" "trigger_hurt"
+	"OnUser1" "!self,AddOutput,solid 2,0,1"
+	"OnUser1" "!self,AddOutput,mins -160 -160 -744,0.1,1"
+	"OnUser1" "!self,AddOutput,maxs 160 160 744,0.1,1"
+}
+
+add:
+{
+	"targetname" "retener"
+	"StartDisabled" "1"
+	"spawnflags" "1"
+	"origin" "-8280 10956 -6224"
+	"nodmgforce" "0"
+	"filtername" "humanos"
+	"damagetype" "0"
+	"damagemodel" "0"
+	"damagecap" "20"
+	"damage" "100000"
+	"classname" "trigger_hurt"
+	"OnUser1" "!self,AddOutput,solid 2,0,1"
+	"OnUser1" "!self,AddOutput,mins -136 -396 -744,0.1,1"
+	"OnUser1" "!self,AddOutput,maxs 136 396 744,0.1,1"
+}

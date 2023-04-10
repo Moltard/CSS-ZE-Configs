@@ -1,0 +1,19 @@
+filter:
+{
+	"targetname" "/aztecboss_relay_random.*/"
+	"classname" "logic_relay"
+}
+
+modify:
+{
+	match:
+	{
+		"targetname" "/lvl[1-5]_Win_Bonus/" ; This match the trigger 1 to 5
+		"classname" "trigger_multiple"
+	}
+	replace:
+	{
+		"classname" "trigger_once"
+	}
+}
+
