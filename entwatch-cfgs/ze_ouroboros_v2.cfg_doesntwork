@@ -1,0 +1,48 @@
+"items"
+{
+	"0"
+	{
+		"name"			"Fire"
+		"short"			"Fire"
+		"color"			"FFFFFF"
+		"filter"		""
+		"weaponid"		"110028"
+		"buttonid"		"109853"
+		"triggerid"		"0"
+		"display"		"7"
+		"slot"			"2"
+		"mode"			"1"
+		"maxuses"		"0"
+		"cooldown"		"50"
+	}
+	"1"
+	{
+		"name"			"Stairs"
+		"short"			"Stairs"
+		"color"			"FFFFFF"
+		"filter"		""
+		"weaponid"		"110030"
+		"buttonid"		"109839"
+		"triggerid"		"0"
+		"display"		"7"
+		"slot"			"2"
+		"mode"			"1"
+		"maxuses"		"0"
+		"cooldown"		"50"
+	}
+	"2"
+	{
+		"name"			"Slow"
+		"short"			"Slow"
+		"color"			"FFFFFF"
+		"filter"		""
+		"weaponid"		"110026"
+		"buttonid"		"110014"
+		"triggerid"		"0"
+		"display"		"7"
+		"slot"			"2"
+		"mode"			"1"
+		"maxuses"		"0"
+		"cooldown"		"50"
+	}
+}

@@ -25,4 +25,17 @@ The **stagedisplay-cfgs** folder contains configs I made for the StageDisplay pl
 
 ---
 
+---
+
+## Entwatch - Unloze plugin version
+
+The **entwatch-cfgs** folder contains configs I made for the Entwatch plugin on Unloze.
+
+It's a (currently) private version of Entwatch recoded from scratch by Zacade (one of the original creator of Entwatch) who wanted to clean the code.
+
+The syntax of the cfg changed, which let me to recreate a majority of all the cfgs. It's possible some of those cfg were not created by me (it's hard to keep track of it once it's on a server).
+
+
+---
+
 

@@ -1,0 +1,189 @@
+"items"
+{
+    "0"
+    {
+        "name"          "Planeshifter"      // The "full" name of the item. (Used in CHAT)
+        "short"         "Planeshifter"      // The "short" name of the item. (Used on the HUD)
+        "color"         "7900FF"      // The HEX color code of the item.
+        "filter"        "Item_gravity_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "578967"     // The HammerID of the weapon.
+        "buttonid"      "579129"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "7"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "2"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "1"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "0"     // The maximum amount of uses.
+        "cooldown"      "60"     // The cooldown between uses.
+    }
+    "1"
+    {
+        "name"          "Melter"      // The "full" name of the item. (Used in CHAT)
+        "short"         "Melter"      // The "short" name of the item. (Used on the HUD)
+        "color"         "FF6C00"      // The HEX color code of the item.
+        "filter"        "item_melter_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "579211"     // The HammerID of the weapon.
+        "buttonid"      "579213"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "7"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "2"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "1"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "0"     // The maximum amount of uses.
+        "cooldown"      "60"     // The cooldown between uses.
+    }
+    "2"
+    {
+        "name"          "Bomber"      // The "full" name of the item. (Used in CHAT)
+        "short"         "Bomber"      // The "short" name of the item. (Used on the HUD)
+        "color"         "FFFB00"      // The HEX color code of the item.
+        "filter"        "Item_bomber_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "578880"     // The HammerID of the weapon.
+        "buttonid"      "579454"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "5"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "2"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "2"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "9"     // The maximum amount of uses.
+        "cooldown"      "0"     // The cooldown between uses.
+    }
+    "3"
+    {
+        "name"          "Chopper"      // The "full" name of the item. (Used in CHAT)
+        "short"         "Chopper"      // The "short" name of the item. (Used on the HUD)
+        "color"         "00B6FF"      // The HEX color code of the item.
+        "filter"        "Item_chopper_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "579710"     // The HammerID of the weapon.
+        "buttonid"      "579706"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "7"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "2"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "1"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "0"     // The maximum amount of uses.
+        "cooldown"      "60"     // The cooldown between uses.
+    }
+    "4"
+    {
+        "name"          "RAGESTIM"      // The "full" name of the item. (Used in CHAT)
+        "short"         "RAGESTIM"      // The "short" name of the item. (Used on the HUD)
+        "color"         "FF0000"      // The HEX color code of the item.
+        "filter"        "zm_rampage_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "579175"     // The HammerID of the weapon.
+        "buttonid"      "579179"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "7"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "3"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "1"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "0"     // The maximum amount of uses.
+        "cooldown"      "70"     // The cooldown between uses.
+    }
+    "5"
+    {
+        "name"          "JUMPTHRUSTER"      // The "full" name of the item. (Used in CHAT)
+        "short"         "JUMPTHRUSTER"      // The "short" name of the item. (Used on the HUD)
+        "color"         "FF0047"      // The HEX color code of the item.
+        "filter"        "zm_jumper_filter"      // The targetname maps use for filtering. (Leave empty if none)
+        "weaponid"      "579151"     // The HammerID of the weapon.
+        "buttonid"      "579153"     // The HammerID of the button.
+        "triggerid"     "0"     // The HammerID of the trigger.
+        "display"       "7"     // The Bitflag for displays.
+                                // 1 = CHAT.
+                                // 2 = USE.
+                                // 3 = CHAT & USE.
+                                // 4 = HUD.
+                                // 5 = CHAT & HUD.
+                                // 6 = USE & HUD.
+                                // 7 = ALL.
+        "slot"          "3"     // The weapon slot.
+                                // 0 = None
+                                // 1 = Primary
+                                // 2 = Secondary
+                                // 3 = Knife
+                                // 4 = Grenades
+        "mode"          "1"     // The mode of the item.
+                                // 1 = Cooldown.
+                                // 2 = Limited uses.
+                                // 3 = Limited uses with cooldown.
+                                // 4 = Cooldown after multiple uses.
+        "maxuses"       "0"     // The maximum amount of uses.
+        "cooldown"      "100"     // The cooldown between uses.
+    }
+}
