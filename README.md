@@ -15,8 +15,32 @@ The **stripper-cfgs** folder contains Stripper:Source configs I made (or contrib
 - `ze_paranoid_rezurrection_v11_9.cfg` Stripper cfg is mainly made by Noctali. 
 	- I added many others changes and fixes to the map, through the years.
 	- It requires people to download a fixed Gargantua model, as the original one packed became corrupted after the 2025 update (files are on the repo)
-	- It requires people to download a new "Blue Screen of Death" overlay (rafuron/paranoid/new_bsod2)
+	- It requires people to download a new "Blue Screen of Death" overlay (materials/rafuron/paranoid/new_bsod2)
+	- It requires people to download a new vtf and vmt for a mode (materials/berke1/zombieescape1/paranoidrezurrection1/allitemsmode1)
+	- Downloading the following material : "materials/models/lotr/singularity/decalmetalvent004a.vmt" should prevent console spam during singularity item usage
 
+
+Add the following to downloads.txt :
+```
+materials/rafuron/paranoid/new_bsod.vmt
+materials/rafuron/paranoid/new_bsod.vtf
+materials/rafuron/paranoid/new_bsod2.vmt
+materials/rafuron/paranoid/new_bsod2.vtf
+materials/models/lotr/singularity/decalmetalvent004a.vmt
+materials/berke1/zombieescape1/paranoidrezurrection1/allitemsmode1.vmt
+materials/berke1/zombieescape1/paranoidrezurrection1/allitemsmode1.vtf
+materials/models/garg_fix_2025/garg_body.vmt
+materials/models/garg_fix_2025/garg_body.vtf
+materials/models/garg_fix_2025/garg_body_normal.vtf
+materials/models/garg_fix_2025/garg_eye_Chrome.vmt
+materials/models/garg_fix_2025/garg_eye_Chrome.vtf
+models/garg_fix_2025.dx80.vtx
+models/garg_fix_2025.dx90.vtx
+models/garg_fix_2025.mdl
+models/garg_fix_2025.phy
+models/garg_fix_2025.sw.vtx
+models/garg_fix_2025.vvd
+```
 
 ---
 

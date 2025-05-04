@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Decals/decalmetalvent004a"
+	"$selfillumtexture" "decals/decalmetalventmask004a"
+}
