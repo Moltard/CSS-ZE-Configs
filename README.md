@@ -14,6 +14,8 @@ The **stripper-cfgs** folder contains Stripper:Source configs I made (or contrib
     - `ze_ffvii_mako_reactor_v5_3.cfg` is the latest version (it also contains some stuff which were added for a server event in 2022)
 - `ze_paranoid_rezurrection_v11_9.cfg` Stripper cfg is mainly made by Noctali. 
 	- I added many others changes and fixes to the map, through the years.
+	- It requires people to download a fixed Gargantua model, as the original one packed became corrupted after the 2025 update (files are on the repo)
+	- It requires people to download a new "Blue Screen of Death" overlay (rafuron/paranoid/new_bsod2)
 
 
 ---
@@ -33,7 +35,7 @@ The **entwatch-cfgs** folder contains configs I made for the Entwatch plugin on 
 
 It's a (currently) private version of Entwatch recoded from scratch by Zacade (one of the original creator of Entwatch) who wanted to clean the code.
 
-The syntax of the cfg changed, which let me to recreate a majority of all the cfgs. It's possible some of those cfg were not created by me (it's hard to keep track of it once it's on a server).
+The syntax of the cfg changed, which led me to recreate a majority of all the cfgs. It's possible some of those cfg were not created by me (it's hard to keep track of it once it's on a server).
 
 
 ---

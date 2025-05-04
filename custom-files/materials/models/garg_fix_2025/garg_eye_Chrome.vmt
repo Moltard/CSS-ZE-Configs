@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+
+        "$envmap" "models/garg_fix_2025/garg_eye_Chrome"
+
+	"$envmapsphere"	"1"
+
+	"$envmapmode" "1"
+
+	"$multipass" "1"
+
+        "$envmapsaturation" "0"
+
+	"$envmapcontrast" 1.1
+
+	"$surfaceprop" "alienflesh"
+
+	"$model" 1
+}
