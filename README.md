@@ -18,6 +18,7 @@ The **stripper-cfgs** folder contains Stripper:Source configs I made (or contrib
 	- It requires people to download a new "Blue Screen of Death" overlay (materials/rafuron/paranoid/new_bsod2)
 	- It requires people to download a new vtf and vmt for a mode (materials/berke1/zombieescape1/paranoidrezurrection1/allitemsmode1)
 	- Downloading the following material : "materials/models/lotr/singularity/decalmetalvent004a.vmt" should prevent console spam during singularity item usage
+	- It requires servers owners to upload the leaderboard.nut file on their server (cstrike/scripts/vscripts/ze_paranoid_rezurrection/berke)
 
 
 Add the following to downloads.txt :
