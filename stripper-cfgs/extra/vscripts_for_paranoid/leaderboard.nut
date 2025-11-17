@@ -5,6 +5,8 @@ const strSaveFile = "solowins%i";
 const strLeaderboardTitle = "Solo Win Leaderboard"
 const iLeaderboardLimit = 10;
 
+const iPlayerRequirement = 20;
+
 iMaxPlayers <- MaxClients().tointeger(),
 strFullSavePath <- strSavePath + strSaveFile + ".txt";
 
@@ -95,6 +97,25 @@ function OnSoloWin()
 {
 	if (!activator || IsPlayerBot(activator))
 		return;
+
+	local iPlayerCount = 0;
+
+	for (local iPlayerIndex = 1; iPlayerCount < iPlayerRequirement && iPlayerIndex <= iMaxPlayers; iPlayerIndex++)
+	{
+		local hPlayer = PlayerInstanceFromIndex(iPlayerIndex);
+
+		if (!hPlayer || IsPlayerBot(hPlayer))
+			continue;
+
+		iPlayerCount++;
+	}
+
+	if (iPlayerCount < iPlayerRequirement && iPlayerCount < iMaxPlayers)
+	{
+		MapPrintToChat(activator, "You have won solo! However, due to the insufficent player count you did not place at the leaderboard.");
+
+		return;
+	}
 
 	local aPlayerDatas = GetPlayerSaveData(),
 	iSteamId32 = GetPlayerSteamId32(activator),
@@ -254,6 +275,7 @@ function GetOrdinalNumber(iNumber)
 		switch (iNumber % 10)
 		{
 			case 1:
+
 			strSuffix = "st";
 
 			break;
