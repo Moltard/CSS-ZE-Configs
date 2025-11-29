@@ -39,16 +39,9 @@ function OnPostSpawn()
 			local strName = GetPlayerName(hPlayer);
 
 			if (strName != tPlayerData.strName)
-			{
 				bIsSaveModified = true,
 				tPlayerData.strName = strName,
-				aPlayerDatas[iPlayerDataIndex] = "";
-
-				if (iPlayerDataIndex < iLeaderboardLimit)
-					aPlayerDatas[iPlayerDataIndex] += tPlayerData.strName + "|";
-
-				aPlayerDatas[iPlayerDataIndex] += tPlayerData.iSteamId32 + "|" + tPlayerData.iWinNumber;
-			}
+				aPlayerDatas[iPlayerDataIndex] = (iPlayerDataIndex < iLeaderboardLimit ? tPlayerData.strName + "|" : "") + tPlayerData.iSteamId32 + "|" + tPlayerData.iWinNumber;
 
 			break;
 		}
@@ -69,9 +62,7 @@ function OnPostSpawn()
 
 function OnPlayerChat(tData)
 {
-	local strText = tData.text;
-
-	if (!startswith(strText, "!showsolowins"))
+	if (!startswith(tData.text, "!showsolowins"))
 		return;
 
 	local hPlayer = GetPlayerFromUserID(tData.userid),
@@ -112,7 +103,7 @@ function OnSoloWin()
 
 	if (iPlayerCount < iPlayerRequirement && iPlayerCount < iMaxPlayers)
 	{
-		MapPrintToChat(activator, "You have won solo! However, due to the insufficent player count you did not place at the leaderboard.");
+		MapPrintToChat(activator, "You have won solo! However, due to the insufficent player count your win did not count for leaderboard.");
 
 		return;
 	}
@@ -132,33 +123,22 @@ function OnSoloWin()
 		tPlayerData.iWinNumber++;
 		local iWinNumber = tPlayerData.iWinNumber;
 
-		aPlayerDatas[iPlayerDataIndex] = "";
-
-		if (iPlayerDataIndex < iLeaderboardLimit)
-			aPlayerDatas[iPlayerDataIndex] += tPlayerData.strName + "|";
-
-		aPlayerDatas[iPlayerDataIndex] += tPlayerData.iSteamId32 + "|" + iWinNumber;
-		local aPreviousPlayerDatas = aPlayerDatas.slice(0, iPlayerDataIndex);
-		aPreviousPlayerDatas.reverse();
-
-		foreach (iPreviousPlayerDataIndex, strPreviousPlayerData in aPreviousPlayerDatas)
+		if (iPlayerDataIndex)
 		{
-			local tPreviousPlayerData = ParsePlayerSaveData(strPreviousPlayerData);
+			local iNewPlayerDataIndex = iPlayerDataIndex;
 
-			if (tPreviousPlayerData.iWinNumber >= iWinNumber)
-				break;
+			for (local iCurrentPlayerDataIndex = iPlayerDataIndex - 1; iCurrentPlayerDataIndex != -1 && ParsePlayerSaveData(aPlayerDatas[iCurrentPlayerDataIndex]).iWinNumber < iWinNumber; iCurrentPlayerDataIndex--)
+				iNewPlayerDataIndex--;
 
-			strPlayerData = aPlayerDatas.remove(iPlayerDataIndex);
-			local iNewPlayerDataIndex = iPlayerDataIndex - iPreviousPlayerDataIndex - 1;
-
-			if (iPlayerDataIndex >= iLeaderboardLimit && iNewPlayerDataIndex < iLeaderboardLimit)
-				strPlayerData = GetPlayerName(activator) + "|" + strPlayerData;
-
-			iPlayerDataIndex = iNewPlayerDataIndex;
-			aPlayerDatas.insert(iPlayerDataIndex, strPlayerData);
-
-			break;
+			if (iNewPlayerDataIndex != iPlayerDataIndex)
+			{
+				strPlayerData = aPlayerDatas.remove(iPlayerDataIndex);
+				iPlayerDataIndex = iNewPlayerDataIndex;
+				aPlayerDatas.insert(iPlayerDataIndex, strPlayerData);
+			}
 		}
+
+		aPlayerDatas[iPlayerDataIndex] = (iPlayerDataIndex < iLeaderboardLimit ? tPlayerData.strName + "|" : "") + tPlayerData.iSteamId32 + "|" + iWinNumber;
 
 		MapPrintToChat(activator, "You have won solo! You have " + iWinNumber + " solo " + GetWordPlural(iWinNumber, "win", "wins") + ", placing " + GetOrdinalNumber(iPlayerDataIndex + 1) + " at the leaderboard.");
 
@@ -223,14 +203,8 @@ function SetPlayerSaveData(aPlayerDatas)
 
 	foreach (iPlayerDataIndex, strPlayerData in aPlayerDatas)
 	{
-		local strPendingIndependentPlayerData = "",
-		tPlayerData = ParsePlayerSaveData(strPlayerData);
-
-		if (iSaveFile == 1 && iPlayerDataIndex < iLeaderboardLimit)
-			strPendingIndependentPlayerData += tPlayerData.strName + "|";
-
-		strPendingIndependentPlayerData += tPlayerData.iSteamId32 + "|" + tPlayerData.iWinNumber;
-
+		local tPlayerData = ParsePlayerSaveData(strPlayerData),
+		strPendingIndependentPlayerData = (iSaveFile == 1 && iPlayerDataIndex < iLeaderboardLimit ? tPlayerData.strName + "|" : "") + tPlayerData.iSteamId32 + "|" + tPlayerData.iWinNumber;
 		local strPendingPlayerData = strPendingIndependentPlayerData;
 
 		if (iPlayerDataIndex)
