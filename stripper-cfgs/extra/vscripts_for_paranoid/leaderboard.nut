@@ -103,7 +103,7 @@ function OnSoloWin()
 
 	if (iPlayerCount < iPlayerRequirement && iPlayerCount < iMaxPlayers)
 	{
-		MapPrintToChat(activator, "You have won solo! However, due to the insufficent player count your win did not count for leaderboard.");
+		MapPrintToChat(activator, "You have won solo! However, due to the insufficent player count your win did not count for the leaderboard.");
 
 		return;
 	}
@@ -132,6 +132,9 @@ function OnSoloWin()
 
 			if (iNewPlayerDataIndex != iPlayerDataIndex)
 			{
+				if (iPlayerDataIndex >= iLeaderboardLimit && iNewPlayerDataIndex < iLeaderboardLimit)
+					tPlayerData.strName <- GetPlayerName(activator);
+
 				strPlayerData = aPlayerDatas.remove(iPlayerDataIndex);
 				iPlayerDataIndex = iNewPlayerDataIndex;
 				aPlayerDatas.insert(iPlayerDataIndex, strPlayerData);
@@ -139,7 +142,6 @@ function OnSoloWin()
 		}
 
 		aPlayerDatas[iPlayerDataIndex] = (iPlayerDataIndex < iLeaderboardLimit ? tPlayerData.strName + "|" : "") + tPlayerData.iSteamId32 + "|" + iWinNumber;
-
 		MapPrintToChat(activator, "You have won solo! You have " + iWinNumber + " solo " + GetWordPlural(iWinNumber, "win", "wins") + ", placing " + GetOrdinalNumber(iPlayerDataIndex + 1) + " at the leaderboard.");
 
 		break;
@@ -155,7 +157,6 @@ function OnSoloWin()
 
 		strPlayerData += GetPlayerSteamId32(activator) + "|" + 1;
 		aPlayerDatas.push(strPlayerData);
-
 		MapPrintToChat(activator, "You have won solo! You have 1 solo win, placing " + GetOrdinalNumber(iPlayerDatasCount + 1) + " at the leaderboard.");
 	}
 
